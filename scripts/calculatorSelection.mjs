@@ -131,14 +131,16 @@ var RecipeCalculator = function(){
     inefficientPreview.innerHTML = '';
     nodeTree.createNode(summary.Inefficient, inefficientNodeTree, 'SubRecipes', label, preview, inefficientPreview);
     step2.removeAttribute('disabled');
-    console.log(summary)
 
+    console.log(efficientTable);
     efficientTable.innerHTML = '';
     for (var ingredient of summary.Efficient){
+      console.log(ingredient);
       var row = document.createElement('tr');
       row.innerHTML = `<td>${ingredient.Label}</td><td>${ingredient.RawRate.toFixed(2) + '/min'}</td><td>${ingredient.Building}</td><td>${ingredient.Multiplier}</td>`;
       efficientTable.appendChild(row)
     }
+    console.log(summary)
     //console.log(calc.summary);
   };
   
