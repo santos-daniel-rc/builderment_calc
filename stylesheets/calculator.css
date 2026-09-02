@@ -85,16 +85,23 @@
   border-radius: 4px;
 }
 
-#efficient-table{
-  border: 1px solid black;
+#efficient-table,
+#efficient-table th,
+#efficient-table td{
+  border: 1px solid var(--neutral-6);
+  border-radius: 4px;
   background: var(--neutral-1);
+  border-collapse: collapse;
+  padding: 2px 10px
 }
 
-#efficient-table th:nth-child(2n+1){
+#efficient-table th:nth-child(2n+1),
+#efficient-table td:nth-child(2n+1){
   text-align: center;
 }
 
-#efficient-table th:nth-child(2n){
+#efficient-table th:nth-child(2n),
+#efficient-table td:nth-child(2n){
   text-align: right;
 }
 
