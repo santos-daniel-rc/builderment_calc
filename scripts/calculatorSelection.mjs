@@ -4,9 +4,10 @@ var RecipeCalculator = function(){
   var selectedItems = [];
   var calculateSummary = document.getElementById('calculate-summary');
   var itemSelection = document.getElementById('item-selection-main');
-  var inefficientNodeTree = document.getElementById('inefficient-nodetree');
   var step2 = document.getElementById('step2');
+  var inefficientNodeTree = document.getElementById('inefficient-nodetree');
   var inefficientPreview = document.getElementById('inefficient-preview');
+  var efficientTable = document.querySelector('#efficient-table tbody');
   
   function buildItemList(){
     var items = getItemList('', sortSettings.label);
@@ -131,6 +132,12 @@ var RecipeCalculator = function(){
     nodeTree.createNode(summary.Inefficient, inefficientNodeTree, 'SubRecipes', label, preview, inefficientPreview);
     step2.removeAttribute('disabled');
     console.log(summary)
+
+    efficientTable.innerHTML = '';
+    for (var ingredient of summary.Efficient){
+      var row = document.createElement('tr');
+      row.innerHTML = `<td>${ingredient.Label}</td><td>${ingredient.RawRate.toFixed(2) + '/min'}</td><td>${ingredient.Building}</td><td>${ingredient.Multiplier.toFixed(1)}</td>`
+    }
     //console.log(calc.summary);
   };
   
