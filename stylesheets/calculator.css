@@ -89,10 +89,12 @@
 #efficient-wrapper > div:first-child{
   overflow-y: auto;
   border: 1px solid var(--neutral-6);
+  border-radius: 4px;
 }
 
 #efficient-table{
   border-collapse: separate;
+  border-spacing: 0;
 }
 
 #efficient-table th,
@@ -103,7 +105,7 @@
 }
 
 #efficient-table tr:last-child td{
-  border-width: 0
+  border-bottom-width: 0
 }
 
 #efficient-table th:first-child{
