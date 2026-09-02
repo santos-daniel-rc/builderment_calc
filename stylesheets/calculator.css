@@ -85,6 +85,19 @@
   border-radius: 4px;
 }
 
+#efficient-table{
+  border: 1px solid black;
+  background: var(--neutral-1);
+}
+
+#efficient-table th:nth-child(2n+1){
+  text-align: center;
+}
+
+#efficient-table th:nth-child(2n){
+  text-align: right;
+}
+
 .item-select{
   width: 210px;
 }
