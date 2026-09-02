@@ -136,7 +136,8 @@ var RecipeCalculator = function(){
     efficientTable.innerHTML = '';
     for (var ingredient of summary.Efficient){
       var row = document.createElement('tr');
-      row.innerHTML = `<td>${ingredient.Label}</td><td>${ingredient.RawRate.toFixed(2) + '/min'}</td><td>${ingredient.Building}</td><td>${ingredient.Multiplier.toFixed(1)}</td>`
+      row.innerHTML = `<td>${ingredient.Label}</td><td>${ingredient.RawRate.toFixed(2) + '/min'}</td><td>${ingredient.Building}</td><td>${ingredient.Multiplier}</td>`;
+      efficientTable.appendChild(row)
     }
     //console.log(calc.summary);
   };
